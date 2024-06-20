@@ -2,7 +2,6 @@ package com.chat.socketIO.model;
 
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.Serializable;
 
@@ -13,7 +12,7 @@ public class Message implements Serializable {
     private String text;
     private String room;
     private String sender;
-    private MultipartFile mediaFile;
+    private FileData mediaFile;
     public Message() {
     }
 
@@ -30,7 +29,7 @@ public class Message implements Serializable {
         this.sender = sender;
     }
 
-    public Message(String message , String room , String sender , MultipartFile media){
+    public Message(String message , String room , String sender , FileData media){
         this.text = message;
         this.room = room;
         this.sender = sender;

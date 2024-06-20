@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Slf4j
 @Component
 @CrossOrigin
-public class SocketModule {
+public class SocketUtils {
 
 
     private final SocketIOServer server;
     private final SocketService socketService;
 
-    public SocketModule(SocketIOServer server, SocketService socketService) {
+    public SocketUtils(SocketIOServer server, SocketService socketService) {
         this.server = server;
         this.socketService = socketService;
     }
@@ -28,7 +28,6 @@ public class SocketModule {
         server.addConnectListener(onConnected());
         server.addDisconnectListener(onDisconnected());
         server.addEventListener("send_message", Message.class, onChatReceived());
-        log.info("Started socket module ");
     }
 
 
