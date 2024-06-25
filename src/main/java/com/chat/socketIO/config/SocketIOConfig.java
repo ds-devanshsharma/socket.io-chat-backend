@@ -18,6 +18,9 @@ public class SocketIOConfig {
         com.corundumstudio.socketio.Configuration config = new com.corundumstudio.socketio.Configuration();
         config.setHostname(host);
         config.setPort(port);
+
+        config.setMaxFramePayloadLength(10 * 1024 * 1024);
+        config.setMaxHttpContentLength(10 * 1024 * 1024);
         return new SocketIOServer(config);
     }
 

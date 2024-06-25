@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class DemoSocketioApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext applicationContext = SpringApplication.run(DemoSocketioApplication.class, args);
+		SpringApplication.run(DemoSocketioApplication.class, args);
 	}
 
 }
