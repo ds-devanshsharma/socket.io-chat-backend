@@ -6,7 +6,6 @@ import lombok.ToString;
 import java.io.Serializable;
 
 @Data
-@ToString
 public class Message implements Serializable {
     private MessageType type;
     private String text;
@@ -34,6 +33,14 @@ public class Message implements Serializable {
         this.room = room;
         this.sender = sender;
         this.mediaFile = media;
+    }
+    public String toString(){
+        return "Message[" +
+                "text : " +this.text+" ," +
+                "sender : " +this.sender+" ," +
+                "room : " +this.room+" ," +
+                "mediaFile : " +this.mediaFile +
+                "]";
     }
 }
 

@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class SocketService {
 
-    public void sendMessage(String room,String eventName, SocketIOClient senderClient, Message message) {
-//        message.setSender(senderClient.getSessionId().toString());
+    public void
+    sendMessage(String room,String eventName, SocketIOClient senderClient, Message message) {
         log.info("Sending message to [get_message] event : {} " , message);
         for (
                 SocketIOClient client : senderClient.getNamespace().getRoomOperations(room).getClients()) {

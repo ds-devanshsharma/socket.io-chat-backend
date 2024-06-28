@@ -21,4 +21,11 @@ public class FileData implements Serializable {
 
     public FileData() {
     }
+    public String toString(){
+        return "FileData[" +
+                "fileName : " +this.fileName+" ," +
+                "fileType : " +this.fileType+" ," +
+                "fileSize : " +Double.parseDouble(String.valueOf(this.data.length/1024)) +" KB" +
+                "]";
+    }
 }
